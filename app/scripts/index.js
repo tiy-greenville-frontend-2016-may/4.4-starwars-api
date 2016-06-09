@@ -1,9 +1,8 @@
 var $ = require('jquery');
 var handlebars = require('handlebars');
 
-
 var baseUrl = 'http://swapi.co/api/';
-var planetListItemTemplate = $('.planet-list-item-template').html();
+var planetListItemTemplate = $('#planet-list-item-template').html();
 var template = handlebars.compile(planetListItemTemplate);
 
 $('.js-planets-button').on('click', function(event){
@@ -25,6 +24,8 @@ function getPlanets(){
 function displayPlanet(planet){
   var html = template(planet)
   $('.js-planet-list').append(html);
+
+  console.log(planet);
 
   // $.ajax().done(function(data){
   //   $('#' + )
