@@ -6,7 +6,7 @@ var githubtoken = require('./githubapikey.js');
 if(githubtoken !== undefined){
   $.ajaxSetup({
     headers: {
-      'Authorization': 'token' + githubtoken
+      'Authorization': 'token ' + githubtoken.token
     }
   });
 }
